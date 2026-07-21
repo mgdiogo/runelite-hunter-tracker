@@ -3,7 +3,7 @@ package io.github.mgdiogo.huntertracker;
 import net.runelite.client.RuneLite;
 import net.runelite.client.externalplugins.ExternalPluginManager;
 
-public class ExamplePluginTest
+public class HunterTrackerPluginTest
 {
 	public static void main(String[] args) throws Exception
 	{

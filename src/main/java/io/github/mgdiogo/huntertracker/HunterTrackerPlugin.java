@@ -14,7 +14,7 @@ import net.runelite.client.plugins.PluginDescriptor;
 
 @Slf4j
 @PluginDescriptor(
-	name = "Example"
+	name = "Hunter Tracker"
 )
 public class HunterTrackerPlugin extends Plugin
 {
@@ -27,22 +27,13 @@ public class HunterTrackerPlugin extends Plugin
 	@Override
 	protected void startUp() throws Exception
 	{
-		log.debug("Example started!");
+		log.debug("Hunter Tracker started!");
 	}
 
 	@Override
 	protected void shutDown() throws Exception
 	{
-		log.debug("Example stopped!");
-	}
-
-	@Subscribe
-	public void onGameStateChanged(GameStateChanged gameStateChanged)
-	{
-		if (gameStateChanged.getGameState() == GameState.LOGGED_IN)
-		{
-			client.addChatMessage(ChatMessageType.GAMEMESSAGE, "", "Example says " + config.greeting(), null);
-		}
+		log.debug("Hunter Tracker stopped!");
 	}
 
 	@Provides
