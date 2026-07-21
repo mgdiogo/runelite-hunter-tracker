@@ -50,7 +50,8 @@ public class HunterTrackerPlugin extends Plugin
 	{
 		log.debug("Hunter Tracker stopped!");
 
-		clientToolbar.removeNavigation(navigationButton);
+		if (navigationButton != null)
+			clientToolbar.removeNavigation(navigationButton);
 
 		navigationButton = null;
 		panel = null;
@@ -62,7 +63,8 @@ public class HunterTrackerPlugin extends Plugin
 		return configManager.getConfig(HunterTrackerConfig.class);
 	}
 
-	private BufferedImage loadIcon() {
+	private BufferedImage loadIcon()
+	{
 		return ImageUtil.loadImageResource(getClass(), "/huntertracker.png");
 	}
 }
